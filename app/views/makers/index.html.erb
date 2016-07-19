@@ -1,0 +1,9 @@
+<form action="/makers/search_models" method="GET">
+  <p>
+  	<span style="color:red"><%=params[:message]%></span>
+  <p>
+   <%= label_tag  t('titleMarker') %>:
+   <%= collection_select(:maker, :webmotors_id, @makers, :webmotors_id, :name,{:prompt => t('pleaseSelectMarker')}) %>
+  </p>
+   <%= submit_tag(t('btnSearchModel')) %>
+</form>
